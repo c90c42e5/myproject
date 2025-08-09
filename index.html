@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>簡単なWebページ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f0f8ff;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    #message {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #007acc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ようこそ！</h1>
+  <p>ボタンをクリックすると挨拶が表示されます。</p>
+  <button onclick="sayHello()">挨拶する</button>
+  <div id="message"></div>
+
+  <script>
+    function sayHello() {
+      document.getElementById("message").textContent = "こんにちは！良い一日を😊";
+    }
+  </script>
+
+</body>
+</html>
