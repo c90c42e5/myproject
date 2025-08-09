@@ -1,46 +1,26 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>簡単なWebページ</title>
+  <title>世界の挨拶</title>
   <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      margin-top: 100px;
-      background-color: #f0f8ff;
-    }
-
-    h1 {
-      color: #333;
-    }
-
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      margin-top: 20px;
-      cursor: pointer;
-    }
-
-    #message {
-      margin-top: 30px;
-      font-size: 18px;
-      color: #007acc;
-    }
+    body { text-align: center; margin-top: 100px; font-family: Arial; }
+    button { padding: 15px 30px; font-size: 18px; cursor: pointer; }
+    #message { margin-top: 20px; font-size: 24px; color: blue; }
   </style>
 </head>
 <body>
-
-  <h1>ようこそ！</h1>
-  <p>ボタンをクリックすると挨拶が表示されます。</p>
-  <button onclick="sayHello()">挨拶する</button>
+  <h1>挨拶</h1>
+  <button onclick="sayHello()">クリック！</button>
   <div id="message"></div>
 
   <script>
+    var greetings = ["こんにちは！", "Hello!", "Bonjour!", "Hola!"];
+    var count = 0;
+    
     function sayHello() {
-      document.getElementById("message").textContent = "こんにちは！良い一日を😊";
+      document.getElementById("message").innerHTML = greetings[count];
+      count = (count + 1) % greetings.length;
     }
   </script>
-
 </body>
 </html>
